@@ -4,6 +4,8 @@ package org.example.infra;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.awt.color.ICC_Profile;
+
 public class SlackNotifierTest {
 
     @Test
