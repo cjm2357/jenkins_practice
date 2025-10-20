@@ -1,6 +1,5 @@
 package org.example.infra;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -15,7 +14,7 @@ public class SlackNotifier {
 
 
     public SlackNotifier()  {
-        try (InputStream input =  new FileInputStream("src/config/application.properties");) {
+        try (InputStream input = SlackNotifier.class.getClassLoader().getResourceAsStream("config/application.properties");) {
             Properties prop = new Properties();
             prop.load(input);
             webhookUrl = prop.getProperty("slack-webhook-url");
