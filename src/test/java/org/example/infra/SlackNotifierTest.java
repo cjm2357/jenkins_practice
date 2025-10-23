@@ -10,6 +10,7 @@ public class SlackNotifierTest {
     @DisplayName("테스트 코드 작동여부 확인")
     public void test1() {
         System.out.println("START");
+
         SlackNotifier notifier = new SlackNotifier();
         notifier.sendMessage("DSASD");
     }
